@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capinview</title>
+<link rel="stylesheet" href="_shared.css">
+</head>
+<body data-active="en">
+<main>
+<header>
+  <div class="brand">Capinview</div>
+  <h1 data-lang="en">Portfolio tracking that stays on your phone</h1>
+  <h1 data-lang="tr">Telefonunuzdan çıkmayan portföy takibi</h1>
+  <p class="meta" data-lang="en">Android · <code>com.capinview.app</code></p>
+  <p class="meta" data-lang="tr">Android · <code>com.capinview.app</code></p>
+  <div class="switch">
+    <button type="button" data-set="en" aria-pressed="true">English</button>
+    <button type="button" data-set="tr" aria-pressed="false">Türkçe</button>
+  </div>
+</header>
+
+<div data-lang="en">
+  <p>Capinview is a personal portfolio tracker for Android. Every transaction you enter stays in a
+  database on your own device — there is no account, no sign-in, and no server of ours holding your
+  data.</p>
+  <h2>Documents</h2>
+  <ul>
+    <li><a href="privacy/">Privacy Policy</a></li>
+    <li><a href="terms/">Terms of Use</a></li>
+  </ul>
+  <h2>Support</h2>
+  <p>Questions, bug reports and feature requests:
+  <a href="mailto:kerem.ishik@gmail.com">kerem.ishik@gmail.com</a></p>
+</div>
+
+<div data-lang="tr">
+  <p>Capinview, Android için kişisel bir portföy takip uygulamasıdır. Girdiğiniz her işlem kendi
+  cihazınızdaki bir veritabanında kalır — hesap yok, oturum açma yok ve verilerinizi tutan bir
+  sunucumuz yok.</p>
+  <h2>Belgeler</h2>
+  <ul>
+    <li><a href="privacy/">Gizlilik Politikası</a></li>
+    <li><a href="terms/">Kullanım Koşulları</a></li>
+  </ul>
+  <h2>Destek</h2>
+  <p>Soru, hata bildirimi ve özellik önerileri:
+  <a href="mailto:kerem.ishik@gmail.com">kerem.ishik@gmail.com</a></p>
+</div>
+
+<footer>
+  <p>© 2026 Kerem Işık</p>
+</footer>
+</main>
+
+<script>
+  var body = document.body;
+  var buttons = document.querySelectorAll('.switch button');
+  function setLang(lang) {
+    body.setAttribute('data-active', lang);
+    document.documentElement.lang = lang;
+    buttons.forEach(function (b) {
+      b.setAttribute('aria-pressed', String(b.dataset.set === lang));
+    });
+    try { localStorage.setItem('capinview-legal-lang', lang); } catch (e) {}
+  }
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () { setLang(b.dataset.set); });
+  });
+  var stored = null;
+  try { stored = localStorage.getItem('capinview-legal-lang'); } catch (e) {}
+  setLang(stored || ((navigator.language || 'en').toLowerCase().indexOf('tr') === 0 ? 'tr' : 'en'));
+</script>
+</body>
+</html>
