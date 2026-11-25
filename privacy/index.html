@@ -12,8 +12,8 @@
   <div class="brand">Capinview</div>
   <h1 data-lang="en">Privacy Policy</h1>
   <h1 data-lang="tr">Gizlilik Politikası</h1>
-  <p class="meta" data-lang="en">Last updated: 30 August 2026 · Applies to Capinview for Android (<code>com.capinview.app</code>)</p>
-  <p class="meta" data-lang="tr">Son güncelleme: 30 Ağustos 2026 · Android için Capinview (<code>com.capinview.app</code>) için geçerlidir</p>
+  <p class="meta" data-lang="en">Last updated: 26 November 2026 · Applies to Capinview for Android (<code>com.capinview.app</code>)</p>
+  <p class="meta" data-lang="tr">Son güncelleme: 26 Kasım 2026 · Android için Capinview (<code>com.capinview.app</code>) için geçerlidir</p>
   <div class="switch">
     <button type="button" data-set="en" aria-pressed="true">English</button>
     <button type="button" data-set="tr" aria-pressed="false">Türkçe</button>
@@ -56,7 +56,10 @@ endpoint. Those requests contain:</p>
   <li>the currency pairs you need, and</li>
   <li>a date range.</li>
 </ul>
-<p>They contain <strong>no</strong> quantity, no purchase price, no total value, no portfolio name and no
+<p>Two other requests go to the same provider. When you search for an instrument, the text you type
+into the search field is sent to find matching symbols. When you add an instrument, the app asks for
+its public company profile — sector and industry — to group your holdings.</p>
+<p>None of these requests contain <strong>any</strong> quantity, no purchase price, no total value, no portfolio name and no
 identifier for you or your device. As with any request to any website, the receiving server sees the
 IP address and general technical information of the connection; that is a property of the internet
 rather than something the app adds. Yahoo processes those requests under its own privacy policy.</p>
@@ -74,8 +77,13 @@ your device and Google account settings. We have no access to it. You can turn i
 device's system settings.</p>
 
 <h2>Permissions</h2>
-<p>The app requests two permissions: internet access and network-state access, both used solely to
-fetch prices. It does not ask for contacts, location, camera, microphone, phone state or storage.</p>
+<p>The app uses internet and network-state access to fetch prices; Google Play's billing permission
+to check and sell the subscription; and the permissions Android's background-work library needs to
+refresh prices on a schedule (keeping the device awake briefly, resuming after a restart, and running
+a short foreground task). None of them reads anything about you. The app does not ask for contacts,
+location, camera, microphone, phone state or storage.</p>
+<p>Google Play may check that the copy of the app on your device was installed from Google Play, to
+protect against tampered copies. That check is carried out by Google under its own privacy policy.</p>
 
 <h2>Children</h2>
 <p>Capinview is intended for adults managing their own finances. It is not directed at children, and
@@ -137,7 +145,10 @@ Finance uç noktasından alır. Bu isteklerin içinde şunlar bulunur:</p>
   <li>ihtiyaç duyulan para birimi çiftleri ve</li>
   <li>bir tarih aralığı.</li>
 </ul>
-<p>İçlerinde <strong>hiçbir</strong> adet, alış fiyatı, toplam değer, portföy adı ya da sizi veya
+<p>Aynı sağlayıcıya iki istek daha gider. Bir enstrüman aradığınızda, arama kutusuna yazdığınız metin
+eşleşen sembolleri bulmak için gönderilir. Bir enstrüman eklediğinizde uygulama, varlıklarınızı
+gruplayabilmek için o şirketin herkese açık profilini — sektör ve endüstri — ister.</p>
+<p>Bu isteklerin hiçbirinde <strong>hiçbir</strong> adet, alış fiyatı, toplam değer, portföy adı ya da sizi veya
 cihazınızı tanımlayan bir bilgi yer almaz. Herhangi bir web sitesine yapılan her istekte olduğu gibi,
 karşı sunucu bağlantının IP adresini ve genel teknik bilgilerini görür; bu, uygulamanın eklediği bir
 şey değil, internetin kendi işleyişidir. Yahoo bu istekleri kendi gizlilik politikası kapsamında
@@ -156,8 +167,14 @@ hesabınızın ayarlarıyla yönetilir. Bizim erişimimiz yoktur. Cihaz sistem a
 kapatabilirsiniz.</p>
 
 <h2>İzinler</h2>
-<p>Uygulama iki izin ister: internet erişimi ve ağ durumu erişimi. Her ikisi de yalnızca fiyat çekmek
-için kullanılır. Rehber, konum, kamera, mikrofon, telefon durumu veya depolama izni istenmez.</p>
+<p>Uygulama fiyat çekmek için internet ve ağ durumu erişimini; aboneliği kontrol etmek ve satmak için
+Google Play'in faturalandırma iznini; fiyatları planlı olarak yenileyebilmek için de Android'in arka
+plan işleri kütüphanesinin gerektirdiği izinleri (cihazı kısa süre uyanık tutmak, yeniden başlatmadan
+sonra devam etmek ve kısa bir ön plan görevi çalıştırmak) kullanır. Bunların hiçbiri sizinle ilgili bir
+şey okumaz. Rehber, konum, kamera, mikrofon, telefon durumu veya depolama izni istenmez.</p>
+<p>Google Play, değiştirilmiş kopyalara karşı korumak için cihazınızdaki uygulamanın Google Play'den
+yüklenip yüklenmediğini kontrol edebilir. Bu kontrolü Google, kendi gizlilik politikası kapsamında
+yapar.</p>
 
 <h2>Çocuklar</h2>
 <p>Capinview, kendi finansını yöneten yetişkinler içindir. Çocuklara yönelik değildir; zaten hiç veri
