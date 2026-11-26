@@ -4,12 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Capinview — Terms of Use / Kullanım Koşulları</title>
-<link rel="stylesheet" href="../_shared.css">
+<link rel="stylesheet" href="../site.css">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<meta name="theme-color" content="#0c0f11" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 </head>
 <body data-active="en">
 <main>
 <header>
-  <div class="brand">Capinview</div>
+  <a class="brand" href="../"><img src="../assets/icon.png" alt="" width="32" height="32">Capinview</a>
   <h1 data-lang="en">Terms of Use</h1>
   <h1 data-lang="tr">Kullanım Koşulları</h1>
   <p class="meta" data-lang="en">Last updated: 26 November 2026 · Applies to Capinview for Android (<code>com.capinview.app</code>)</p>
@@ -279,6 +282,31 @@ devam etmeniz, güncel koşulları kabul ettiğiniz anlamına gelir.</p>
   }
   buttons.forEach(function (b) {
     b.addEventListener('click', function () { setLang(b.dataset.set); });
+  });
+
+  // A contents list for each language, built from that language's own section headings.
+  document.querySelectorAll('main > div[data-lang]').forEach(function (block) {
+    var heads = block.querySelectorAll('h2');
+    if (heads.length < 4) return;
+    var lang = block.getAttribute('data-lang');
+    var nav = document.createElement('nav');
+    nav.className = 'toc';
+    nav.setAttribute('aria-label', lang === 'tr' ? 'Bu sayfada' : 'On this page');
+    var title = document.createElement('p');
+    title.textContent = lang === 'tr' ? 'Bu sayfada' : 'On this page';
+    var list = document.createElement('ol');
+    heads.forEach(function (h, i) {
+      h.id = h.id || lang + '-' + (i + 1);
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = '#' + h.id;
+      a.textContent = h.textContent.replace(/^\d+\.\s*/, '');
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+    nav.appendChild(title);
+    nav.appendChild(list);
+    block.insertBefore(nav, block.firstElementChild);
   });
   var stored = null;
   try { stored = localStorage.getItem('capinview-legal-lang'); } catch (e) {}
