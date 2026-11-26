@@ -18,7 +18,9 @@ Publish to those exact URLs and nothing in the app changes. Publish somewhere el
 
 ```
 docs/legal/
-├── _shared.css        one stylesheet, light and dark, no external assets
+├── .nojekyll          tells GitHub Pages not to run Jekyll (which drops `_` files)
+├── site.css           one stylesheet in the app's palette, light and dark
+├── assets/            icon and favicon
 ├── index.html         landing page, links to both documents
 ├── privacy/index.html Privacy Policy — English and Turkish in one page
 └── terms/index.html   Terms of Use — English and Turkish in one page
@@ -31,7 +33,7 @@ Console needs only one URL per document regardless of locale.
 
 1. Create a **new public GitHub repository named `capinview`** on the `keremishik` account. The
    repository name is what produces the `/capinview/` path segment; a different name changes the URL.
-2. Upload the contents of *this folder* — `_shared.css`, `index.html`, `privacy/`, `terms/` — to the
+2. Upload the contents of *this folder* — `.nojekyll`, `site.css`, `assets/`, `index.html`, `privacy/`, `terms/` — to the
    repository root, keeping the folder structure. Drag-and-drop in the GitHub web UI handles this;
    `git init && git add . && git commit && git push` does too.
 3. **Settings → Pages → Source: Deploy from a branch → `main` / `/ (root)` → Save.**
