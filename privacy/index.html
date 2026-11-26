@@ -12,8 +12,8 @@
   <div class="brand">Capinview</div>
   <h1 data-lang="en">Privacy Policy</h1>
   <h1 data-lang="tr">Gizlilik Politikası</h1>
-  <p class="meta" data-lang="en">Last updated: 26 November 2026 · Applies to Capinview for Android (<code>com.capinview.app</code>)</p>
-  <p class="meta" data-lang="tr">Son güncelleme: 26 Kasım 2026 · Android için Capinview (<code>com.capinview.app</code>) için geçerlidir</p>
+  <p class="meta" data-lang="en">Last updated: 27 November 2026 · Applies to Capinview for Android (<code>com.capinview.app</code>)</p>
+  <p class="meta" data-lang="tr">Son güncelleme: 27 Kasım 2026 · Android için Capinview (<code>com.capinview.app</code>) için geçerlidir</p>
   <div class="switch">
     <button type="button" data-set="en" aria-pressed="true">English</button>
     <button type="button" data-set="tr" aria-pressed="false">Türkçe</button>
@@ -49,25 +49,24 @@ or uninstall the app. You can take a copy at any time with <strong>Settings → 
 which works whether or not you have an active subscription.</p>
 
 <h2>The network requests the app makes</h2>
-<p>Capinview needs current prices and exchange rates, and it fetches them from a public Yahoo Finance
-endpoint. Those requests contain:</p>
+<p>Capinview needs current prices, exchange rates and Turkish fund prices. It does not run a server of
+its own for this: your phone fetches them directly from third-party public market data services.
+Those requests contain:</p>
 <ul>
-  <li>the ticker symbols of the instruments you track (for example <code>THYAO.IS</code>, <code>AAPL</code>),</li>
+  <li>the ticker symbols or fund codes of the instruments you track (for example <code>THYAO</code>, <code>AAPL</code>),</li>
   <li>the currency pairs you need, and</li>
-  <li>a date range.</li>
+  <li>a date range or look-back period.</li>
 </ul>
-<p>Two other requests go to the same provider. When you search for an instrument, the text you type
-into the search field is sent to find matching symbols. When you add an instrument, the app asks for
-its public company profile — sector and industry — to group your holdings.</p>
-<p>Prices of Turkish investment and pension funds come from the public website of TEFAS, the fund
-trading platform operated by Takasbank. Those requests contain the codes of the funds you track and
-a look-back period; the app also downloads TEFAS's public list of funds so that fund search works on
-your device.</p>
+<p>Three other requests go to the same kind of service. When you search for an instrument, the text
+you type into the search field is sent to find matching symbols. When you add an instrument, the app
+asks for its public company profile — sector and industry — to group your holdings. And the app
+downloads a public list of Turkish funds so that fund search works on your device.</p>
 <p>None of these requests contain <strong>any</strong> quantity, no purchase price, no total value, no portfolio name and no
-identifier for you or your device. As with any request to any website, the receiving server sees the
+identifier for you or your device. As with any request to any website, the receiving service sees the
 IP address and general technical information of the connection; that is a property of the internet
-rather than something the app adds. Yahoo and Takasbank process those requests under their own
-privacy policies.</p>
+rather than something the app adds. These services are independent of Capinview and process those
+requests under their own privacy policies; nothing from them passes through us. If you would like to
+know which services they are, write to us and we will tell you.</p>
 
 <h2>Subscriptions and payment</h2>
 <p>Capinview Pro is sold through Google Play. <strong>The app never sees your card, your billing
@@ -147,25 +146,24 @@ uygulamayı kaldırdığınızda silinir. Dilediğiniz an <strong>Ayarlar → CS
 kopyasını alabilirsiniz; bu özellik aktif aboneliğiniz olsun olmasın çalışır.</p>
 
 <h2>Uygulamanın yaptığı ağ istekleri</h2>
-<p>Capinview'ın güncel fiyatlara ve döviz kurlarına ihtiyacı vardır; bunları herkese açık bir Yahoo
-Finance uç noktasından alır. Bu isteklerin içinde şunlar bulunur:</p>
+<p>Capinview'ın güncel fiyatlara, döviz kurlarına ve Türkiye'deki fonların fiyatlarına ihtiyacı vardır.
+Bunun için kendi sunucusunu çalıştırmaz: telefonunuz bu verileri doğrudan üçüncü taraf, herkese açık
+piyasa verisi servislerinden alır. Bu isteklerin içinde şunlar bulunur:</p>
 <ul>
-  <li>takip ettiğiniz enstrümanların sembolleri (örneğin <code>THYAO.IS</code>, <code>AAPL</code>),</li>
+  <li>takip ettiğiniz enstrümanların sembolleri veya fon kodları (örneğin <code>THYAO</code>, <code>AAPL</code>),</li>
   <li>ihtiyaç duyulan para birimi çiftleri ve</li>
-  <li>bir tarih aralığı.</li>
+  <li>bir tarih aralığı ya da geriye dönük süre.</li>
 </ul>
-<p>Aynı sağlayıcıya iki istek daha gider. Bir enstrüman aradığınızda, arama kutusuna yazdığınız metin
-eşleşen sembolleri bulmak için gönderilir. Bir enstrüman eklediğinizde uygulama, varlıklarınızı
-gruplayabilmek için o şirketin herkese açık profilini — sektör ve endüstri — ister.</p>
-<p>Türkiye'deki yatırım ve emeklilik fonlarının fiyatları, Takasbank'ın işlettiği fon alım satım
-platformu TEFAS'ın herkese açık sitesinden alınır. Bu isteklerde takip ettiğiniz fonların kodları ve bir
-geriye dönük süre bulunur; fon aramasının cihazınızda çalışabilmesi için uygulama TEFAS'ın herkese açık
-fon listesini de indirir.</p>
+<p>Aynı türden servislere üç istek daha gider. Bir enstrüman aradığınızda, arama kutusuna yazdığınız
+metin eşleşen sembolleri bulmak için gönderilir. Bir enstrüman eklediğinizde uygulama, varlıklarınızı
+gruplayabilmek için o şirketin herkese açık profilini — sektör ve endüstri — ister. Fon aramasının
+cihazınızda çalışabilmesi için de Türkiye'deki fonların herkese açık listesini indirir.</p>
 <p>Bu isteklerin hiçbirinde <strong>hiçbir</strong> adet, alış fiyatı, toplam değer, portföy adı ya da sizi veya
 cihazınızı tanımlayan bir bilgi yer almaz. Herhangi bir web sitesine yapılan her istekte olduğu gibi,
-karşı sunucu bağlantının IP adresini ve genel teknik bilgilerini görür; bu, uygulamanın eklediği bir
-şey değil, internetin kendi işleyişidir. Yahoo ve Takasbank bu istekleri kendi gizlilik politikaları
-kapsamında işler.</p>
+isteği alan servis bağlantının IP adresini ve genel teknik bilgilerini görür; bu, uygulamanın eklediği
+bir şey değil, internetin kendi işleyişidir. Bu servisler Capinview'dan bağımsızdır ve istekleri kendi
+gizlilik politikaları kapsamında işler; onlardan gelen hiçbir şey bizim üzerimizden geçmez. Hangi
+servisler olduğunu öğrenmek isterseniz bize yazın, bildirelim.</p>
 
 <h2>Abonelik ve ödeme</h2>
 <p>Capinview Pro, Google Play üzerinden satılır. <strong>Uygulama kartınızı, fatura adresinizi veya
